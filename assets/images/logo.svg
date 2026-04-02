@@ -1,0 +1,29 @@
+<svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Atom orbit 1 (blue, tilted left) -->
+  <ellipse cx="40" cy="40" rx="36" ry="14" transform="rotate(-30 40 40)" stroke="#1a6b63" stroke-width="3" fill="none" opacity="0.8"/>
+  <!-- Atom orbit 2 (teal, tilted right) -->
+  <ellipse cx="40" cy="40" rx="36" ry="14" transform="rotate(30 40 40)" stroke="#0f766e" stroke-width="3" fill="none"/>
+  <!-- Atom orbit 3 (vertical) -->
+  <ellipse cx="40" cy="40" rx="36" ry="14" transform="rotate(90 40 40)" stroke="#2dd4bf" stroke-width="2" fill="none" opacity="0.5"/>
+  <!-- Center compass circle -->
+  <circle cx="40" cy="40" r="6" fill="none" stroke="#2a8c3e" stroke-width="1.5"/>
+  <circle cx="40" cy="40" r="2" fill="#2a8c3e"/>
+  <!-- Compass needle -->
+  <line x1="40" y1="40" x2="40" y2="24" stroke="#2a8c3e" stroke-width="2" stroke-linecap="round"/>
+  <line x1="40" y1="40" x2="47" y2="50" stroke="#2a8c3e" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="40" y1="40" x2="33" y2="50" stroke="#2a8c3e" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Compass arc -->
+  <path d="M33 50 A8 8 0 0 0 47 50" stroke="#2a8c3e" stroke-width="1.5" fill="none"/>
+  <!-- Math symbols -->
+  <!-- Integral ∫ (left) -->
+  <text x="8" y="45" font-family="serif" font-size="14" font-style="italic" fill="#0f766e" opacity="0.9">∫</text>
+  <!-- Delta Δ (bottom) -->
+  <text x="33" y="72" font-family="serif" font-size="12" fill="#2a8c3e" opacity="0.9">Δ</text>
+  <!-- Sigma Σ (right) -->
+  <text x="62" y="55" font-family="serif" font-size="12" fill="#0f766e" opacity="0.9">Σ</text>
+  <!-- Sparkle stars -->
+  <path d="M52 12L53.5 16L55 12L53.5 8Z" fill="#2a8c3e"/>
+  <path d="M50 12L53.5 13.5L57 12L53.5 10.5Z" fill="#2a8c3e"/>
+  <path d="M62 22L63 24.5L64 22L63 19.5Z" fill="#2a8c3e" opacity="0.6"/>
+  <path d="M61 22L63 23L65 22L63 21Z" fill="#2a8c3e" opacity="0.6"/>
+</svg>
