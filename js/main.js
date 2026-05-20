@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
   initCounters();
   initTestimonials();
   initPricing();
+  initPricingTilt();
+  initPriceCounters();
   initFAQ();
   initContactForm();
   initFooterYear();
@@ -322,6 +324,116 @@ function initPricing() {
       });
     });
   });
+}
+
+/**
+ * Pricing Cards — 3D Mouse Tilt + Cursor Spotlight
+ * Skipped on touch devices and when prefers-reduced-motion is set.
+ */
+function initPricingTilt() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!window.matchMedia('(hover: hover)').matches) return;
+
+  const cards = document.querySelectorAll('.pricing-card-tier');
+  if (cards.length === 0) return;
+
+  const MAX_TILT = 6; // degrees
+
+  cards.forEach(function(card) {
+    let rafId = null;
+    let lastEvent = null;
+
+    function applyTilt() {
+      rafId = null;
+      if (!lastEvent) return;
+      const rect = card.getBoundingClientRect();
+      const x = lastEvent.clientX - rect.left;
+      const y = lastEvent.clientY - rect.top;
+      const cx = rect.width / 2;
+      const cy = rect.height / 2;
+      const rotateY = ((x - cx) / cx) * MAX_TILT;
+      const rotateX = ((cy - y) / cy) * MAX_TILT;
+
+      card.style.setProperty('--mouse-x', x + 'px');
+      card.style.setProperty('--mouse-y', y + 'px');
+      card.style.setProperty('--tilt-x', rotateX.toFixed(2) + 'deg');
+      card.style.setProperty('--tilt-y', rotateY.toFixed(2) + 'deg');
+    }
+
+    card.addEventListener('mousemove', function(e) {
+      lastEvent = e;
+      if (rafId === null) rafId = requestAnimationFrame(applyTilt);
+    });
+
+    card.addEventListener('mouseleave', function() {
+      lastEvent = null;
+      card.style.setProperty('--tilt-x', '0deg');
+      card.style.setProperty('--tilt-y', '0deg');
+      card.style.setProperty('--mouse-x', '-200px');
+      card.style.setProperty('--mouse-y', '-200px');
+    });
+  });
+}
+
+/**
+ * Pricing Count-Up
+ * When the pricing section scrolls into view, each .pricing-tier-amount's
+ * numeric text node animates from 0 → its final value with a staggered cascade.
+ * Reads the final value from the existing text content — no HTML changes required.
+ */
+function initPriceCounters() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const section = document.getElementById('pricing');
+  if (!section) return;
+
+  const amounts = section.querySelectorAll('.pricing-tier-amount');
+  if (amounts.length === 0) return;
+
+  const targets = [];
+  amounts.forEach(function(amt) {
+    const textNode = Array.from(amt.childNodes).find(function(n) {
+      return n.nodeType === Node.TEXT_NODE && /^\s*\d+\s*$/.test(n.textContent);
+    });
+    if (!textNode) return;
+    const finalValue = parseInt(textNode.textContent.trim(), 10);
+    if (isNaN(finalValue)) return;
+    targets.push({ textNode: textNode, target: finalValue });
+    textNode.textContent = '0';
+  });
+
+  if (targets.length === 0) return;
+
+  function animateOne(textNode, target) {
+    const duration = 1100;
+    const startTime = performance.now();
+    function update(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.floor(eased * target);
+      textNode.textContent = current.toString();
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        textNode.textContent = target.toString();
+      }
+    }
+    requestAnimationFrame(update);
+  }
+
+  const observer = new IntersectionObserver(function(entries, obs) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        targets.forEach(function(t, i) {
+          setTimeout(function() { animateOne(t.textNode, t.target); }, i * 80);
+        });
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  observer.observe(section);
 }
 
 /**

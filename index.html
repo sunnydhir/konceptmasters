@@ -161,7 +161,7 @@
       "ratingCount": "50",
       "reviewCount": "50"
     },
-    "priceRange": "$55-$65 CAD per session"
+    "priceRange": "$30-$65 CAD per session"
   }
   </script>
 
@@ -181,28 +181,70 @@
     "areaServed": ["Canada", "Turkey"],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Tutoring Packages",
+      "name": "Tutoring Packages by Grade",
       "itemListElement": [
         {
           "@type": "Offer",
-          "name": "Single Session",
+          "name": "Grade 8-9 — One-on-One Hourly",
+          "price": "45",
+          "priceCurrency": "CAD",
+          "description": "1 hour of personalized tutoring for Grade 8-9 students"
+        },
+        {
+          "@type": "Offer",
+          "name": "Grade 8-9 — Group Session (2-4)",
+          "price": "30",
+          "priceCurrency": "CAD",
+          "description": "1 hour of small-group tutoring for Grade 8-9 students"
+        },
+        {
+          "@type": "Offer",
+          "name": "Grade 8-9 — Monthly (8 sessions)",
+          "price": "280",
+          "priceCurrency": "CAD",
+          "description": "8 one-hour sessions per month for Grade 8-9 students"
+        },
+        {
+          "@type": "Offer",
+          "name": "Grade 9-10 — One-on-One Hourly",
+          "price": "55",
+          "priceCurrency": "CAD",
+          "description": "1 hour of personalized tutoring for Grade 9-10 students (MTH1W / MTH2W)"
+        },
+        {
+          "@type": "Offer",
+          "name": "Grade 9-10 — Group Session (2-4)",
+          "price": "40",
+          "priceCurrency": "CAD",
+          "description": "1 hour of small-group tutoring for Grade 9-10 students"
+        },
+        {
+          "@type": "Offer",
+          "name": "Grade 9-10 — Monthly (8 sessions)",
+          "price": "360",
+          "priceCurrency": "CAD",
+          "description": "8 one-hour sessions per month for Grade 9-10 students"
+        },
+        {
+          "@type": "Offer",
+          "name": "Grade 11-12 — One-on-One Hourly",
           "price": "65",
           "priceCurrency": "CAD",
-          "description": "1 hour of focused tutoring"
+          "description": "1 hour of personalized tutoring for Grade 11-12 students (MCR3U, MHF4U, MCV4U)"
         },
         {
           "@type": "Offer",
-          "name": "5-Session Pack",
-          "price": "300",
+          "name": "Grade 11-12 — Group Session (2-4)",
+          "price": "50",
           "priceCurrency": "CAD",
-          "description": "5 hours of tutoring with 8% savings"
+          "description": "1 hour of small-group tutoring for Grade 11-12 students"
         },
         {
           "@type": "Offer",
-          "name": "10-Session Pack",
-          "price": "550",
+          "name": "Grade 11-12 — Monthly (8 sessions)",
+          "price": "450",
           "priceCurrency": "CAD",
-          "description": "10 hours of tutoring with 15% savings"
+          "description": "8 one-hour sessions per month for Grade 11-12 students"
         }
       ]
     }
@@ -1053,95 +1095,114 @@
         <h2 data-lang="pricing.title">Transparent & Value-Driven Pricing</h2>
         <p data-lang="pricing.subtitle">We believe in quality education with clear, straightforward pricing</p>
       </div>
-      <div class="pricing-grid">
-        <div class="pricing-card" data-animate="fade-up" data-delay="100">
-          <h3 data-lang="pricing.single.title">One-on-One Sessions</h3>
-          <p class="pricing-description" data-lang="pricing.single.description">Personalized instruction tailored to your learning needs</p>
-          <div class="pricing-price">
-            <span class="currency">$</span>
-            <span class="amount" data-price="65" data-currency="CAD">65</span>
-            <span class="period">/hr</span>
-          </div>
-          <p class="pricing-per-session" data-lang="pricing.single.per">Per session, flexible scheduling</p>
+      <div class="pricing-grid pricing-grid-tiered">
+        <!-- Grade 8-9 -->
+        <div class="pricing-card pricing-card-tier" data-animate="fade-up" data-delay="100">
+          <h3 data-lang="pricing.g89.title">Grade 8 &ndash; 9</h3>
+          <p class="pricing-description" data-lang="pricing.g89.description">Foundational math &amp; science — building blocks for high school</p>
+          <ul class="pricing-tier-list">
+            <li class="pricing-tier-row">
+              <span class="pricing-tier-label" data-lang="pricing.row.oneOnOne">One-on-One</span>
+              <span class="pricing-tier-amount"><span class="currency">CA$</span>45<span class="period">/hr</span></span>
+            </li>
+            <li class="pricing-tier-row">
+              <span class="pricing-tier-label" data-lang="pricing.row.group">Group (2&ndash;4)</span>
+              <span class="pricing-tier-amount"><span class="currency">CA$</span>30<span class="period">/hr</span></span>
+            </li>
+            <li class="pricing-tier-row pricing-tier-row-monthly">
+              <span class="pricing-tier-label" data-lang="pricing.row.monthly">Monthly · 8 sessions</span>
+              <span class="pricing-tier-amount"><span class="currency">CA$</span>280</span>
+            </li>
+          </ul>
           <ul class="pricing-features">
             <li>
               <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              <span data-lang="pricing.feature1">Focused 1:1 instruction</span>
+              <span data-lang="pricing.g89.feature1">Concept-building from the ground up</span>
             </li>
             <li>
               <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              <span data-lang="pricing.feature2">Customized to curriculum</span>
+              <span data-lang="pricing.g89.feature2">Ontario, CBSE &amp; ICSE curriculum</span>
             </li>
             <li>
               <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              <span data-lang="pricing.feature3">Flexible scheduling</span>
-            </li>
-            <li>
-              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              <span data-lang="pricing.feature4">Progress reports</span>
+              <span data-lang="pricing.g89.feature3">Homework support &amp; progress reports</span>
             </li>
           </ul>
-          <a href="#contact" class="btn btn-secondary" data-lang="pricing.cta">Book Free Consultation</a>
+          <a href="#contact" class="btn btn-secondary" data-lang="pricing.cta">Get Quote</a>
         </div>
-        <div class="pricing-card popular" data-animate="fade-up" data-delay="200">
+
+        <!-- Grade 9-10 (Recommended) -->
+        <div class="pricing-card pricing-card-tier popular" data-animate="fade-up" data-delay="200">
           <span class="pricing-badge" data-lang="pricing.popular">Recommended</span>
-          <h3 data-lang="pricing.group.title">5-Session Pack</h3>
-          <p class="pricing-description" data-lang="pricing.group.description">Commit to progress with bundled savings</p>
-          <div class="pricing-price">
-            <span class="currency">$</span>
-            <span class="amount" data-price="300" data-currency="CAD">300</span>
-          </div>
-          <p class="pricing-per-session" data-lang="pricing.group.per">$60/hr — Save 8%</p>
+          <h3 data-lang="pricing.g910.title">Grade 9 &ndash; 10</h3>
+          <p class="pricing-description" data-lang="pricing.g910.description">MTH1W &amp; MTH2W — algebra, functions, and trigonometry foundations</p>
+          <ul class="pricing-tier-list">
+            <li class="pricing-tier-row">
+              <span class="pricing-tier-label" data-lang="pricing.row.oneOnOne">One-on-One</span>
+              <span class="pricing-tier-amount"><span class="currency">CA$</span>55<span class="period">/hr</span></span>
+            </li>
+            <li class="pricing-tier-row">
+              <span class="pricing-tier-label" data-lang="pricing.row.group">Group (2&ndash;4)</span>
+              <span class="pricing-tier-amount"><span class="currency">CA$</span>40<span class="period">/hr</span></span>
+            </li>
+            <li class="pricing-tier-row pricing-tier-row-monthly">
+              <span class="pricing-tier-label" data-lang="pricing.row.monthly">Monthly · 8 sessions</span>
+              <span class="pricing-tier-amount"><span class="currency">CA$</span>360</span>
+            </li>
+          </ul>
           <ul class="pricing-features">
             <li>
               <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              <span data-lang="pricing.feature5">5 hours of focused tutoring</span>
+              <span data-lang="pricing.g910.feature1">Linear, polynomial &amp; trig fundamentals</span>
             </li>
             <li>
               <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              <span data-lang="pricing.feature6">8% savings per session</span>
+              <span data-lang="pricing.g910.feature2">Personalized learning plan</span>
             </li>
             <li>
               <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              <span data-lang="pricing.feature7">Flexible scheduling</span>
-            </li>
-            <li>
-              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              <span data-lang="pricing.feature8">Progress reports included</span>
+              <span data-lang="pricing.g910.feature3">Regular parent updates</span>
             </li>
           </ul>
-          <a href="#contact" class="btn btn-primary" data-lang="pricing.cta">Book Free Consultation</a>
+          <a href="#contact" class="btn btn-primary" data-lang="pricing.cta">Get Quote</a>
         </div>
-        <div class="pricing-card" data-animate="fade-up" data-delay="300">
-          <h3 data-lang="pricing.monthly.title">10-Session Pack</h3>
-          <p class="pricing-description" data-lang="pricing.monthly.description">Best value for serious academic commitment</p>
-          <div class="pricing-price">
-            <span class="currency">$</span>
-            <span class="amount" data-price="550" data-currency="CAD">550</span>
-          </div>
-          <p class="pricing-per-session" data-lang="pricing.monthly.per">$55/hr — Save 15%</p>
+
+        <!-- Grade 11-12 -->
+        <div class="pricing-card pricing-card-tier" data-animate="fade-up" data-delay="300">
+          <h3 data-lang="pricing.g1112.title">Grade 11 &ndash; 12</h3>
+          <p class="pricing-description" data-lang="pricing.g1112.description">MCR3U, MHF4U, MCV4U — university-prep math &amp; physics</p>
+          <ul class="pricing-tier-list">
+            <li class="pricing-tier-row">
+              <span class="pricing-tier-label" data-lang="pricing.row.oneOnOne">One-on-One</span>
+              <span class="pricing-tier-amount"><span class="currency">CA$</span>65<span class="period">/hr</span></span>
+            </li>
+            <li class="pricing-tier-row">
+              <span class="pricing-tier-label" data-lang="pricing.row.group">Group (2&ndash;4)</span>
+              <span class="pricing-tier-amount"><span class="currency">CA$</span>50<span class="period">/hr</span></span>
+            </li>
+            <li class="pricing-tier-row pricing-tier-row-monthly">
+              <span class="pricing-tier-label" data-lang="pricing.row.monthly">Monthly · 8 sessions</span>
+              <span class="pricing-tier-amount"><span class="currency">CA$</span>450</span>
+            </li>
+          </ul>
           <ul class="pricing-features">
             <li>
               <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              <span data-lang="pricing.feature9">10 hours of focused tutoring</span>
+              <span data-lang="pricing.g1112.feature1">Functions, calculus &amp; vectors</span>
             </li>
             <li>
               <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              <span data-lang="pricing.feature10">15% savings per session</span>
+              <span data-lang="pricing.g1112.feature2">University-prep test strategy</span>
             </li>
             <li>
               <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              <span data-lang="pricing.feature11">Personalized learning plan</span>
-            </li>
-            <li>
-              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              <span data-lang="pricing.feature12">Parent updates & progress tracking</span>
+              <span data-lang="pricing.g1112.feature3">Exam prep &amp; final-grade lift</span>
             </li>
           </ul>
-          <a href="#contact" class="btn btn-secondary" data-lang="pricing.cta">Book Free Consultation</a>
+          <a href="#contact" class="btn btn-secondary" data-lang="pricing.cta">Get Quote</a>
         </div>
       </div>
-      <p style="text-align: center; margin-top: var(--space-8); color: var(--gray-600);" data-animate="fade-up" data-lang="pricing.note">All prices in CAD. Session packs are valid for 12 months and can be used across subjects. Contact us for a free consultation to find the best plan for your child.</p>
+      <p style="text-align: center; margin-top: var(--space-8); color: var(--gray-600);" data-animate="fade-up" data-lang="pricing.note">All prices in CAD. Monthly plans cover 8 one-hour sessions and can be used across subjects. Group rates apply for 2&ndash;4 students of the same grade level. Contact us for a free consultation.</p>
     </div>
   </section>
 

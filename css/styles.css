@@ -1750,6 +1750,183 @@ p {
   width: 100%;
 }
 
+/* --- Grade-tiered pricing variant --- */
+.pricing-card-tier {
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-tier-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-6);
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.pricing-tier-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.pricing-tier-row:last-child {
+  border-bottom: none;
+}
+
+.pricing-tier-row-monthly {
+  background: var(--primary-50);
+  margin: 0 calc(var(--space-4) * -1);
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+  border-radius: var(--radius-md);
+}
+
+.pricing-card-tier.popular .pricing-tier-row-monthly {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.pricing-tier-label {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--gray-700);
+}
+
+.pricing-tier-row-monthly .pricing-tier-label {
+  color: var(--primary-800);
+  font-weight: var(--font-semibold);
+}
+
+.pricing-tier-amount {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--gray-900);
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.pricing-tier-amount .currency {
+  font-size: var(--text-sm);
+  font-family: var(--font-primary);
+  font-weight: var(--font-semibold);
+  color: var(--gray-500);
+  margin-right: 4px;
+  letter-spacing: 0.02em;
+}
+
+.pricing-tier-amount .period {
+  font-size: var(--text-sm);
+  color: var(--gray-500);
+  font-family: var(--font-primary);
+  font-weight: var(--font-normal);
+  margin-left: 2px;
+}
+
+.pricing-card-tier .pricing-features {
+  flex: 1;
+  margin-bottom: var(--space-6);
+}
+
+/* --- 3D Mouse Tilt + Cursor Spotlight (hover-capable devices only) --- */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .pricing-card-tier {
+    transform-style: preserve-3d;
+    transition: transform 0.18s ease-out, box-shadow 0.3s ease-out;
+    will-change: transform;
+  }
+
+  .pricing-card-tier:hover {
+    transform: perspective(1000px)
+               rotateX(var(--tilt-x, 0deg))
+               rotateY(var(--tilt-y, 0deg))
+               translateZ(0);
+    box-shadow: var(--shadow-2xl);
+  }
+
+  /* Compose tilt with the existing popular card's scale */
+  .pricing-card-tier.popular {
+    transition: transform 0.18s ease-out, box-shadow 0.3s ease-out;
+  }
+
+  .pricing-card-tier.popular:hover {
+    transform: perspective(1000px)
+               rotateX(var(--tilt-x, 0deg))
+               rotateY(var(--tilt-y, 0deg))
+               scale(1.05)
+               translateZ(0);
+  }
+
+  /* Cursor spotlight overlay */
+  .pricing-card-tier::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+      circle 220px at var(--mouse-x, -200px) var(--mouse-y, -200px),
+      rgba(20, 184, 166, 0.18),
+      rgba(20, 184, 166, 0.04) 40%,
+      transparent 60%
+    );
+    opacity: 0;
+    transition: opacity 0.35s ease-out;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .pricing-card-tier:hover::after {
+    opacity: 1;
+  }
+
+  /* Ensure card content sits above the spotlight */
+  .pricing-card-tier > * {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+/* --- Animated conic-gradient border on the Recommended card --- */
+@property --gradient-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .pricing-card-tier.popular {
+    z-index: 1;
+  }
+
+  .pricing-card-tier.popular::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: inherit;
+    background: conic-gradient(
+      from var(--gradient-angle),
+      var(--primary-500),
+      var(--accent-gold),
+      var(--primary-600),
+      var(--accent-amber-light),
+      var(--primary-400),
+      var(--primary-500)
+    );
+    z-index: -1;
+    animation: pricing-rotate-gradient 9s linear infinite;
+    opacity: 0.55;
+    filter: blur(3px);
+  }
+
+  @keyframes pricing-rotate-gradient {
+    to { --gradient-angle: 360deg; }
+  }
+}
+
 /* ============================================
    15. FAQ SECTION
    ============================================ */
