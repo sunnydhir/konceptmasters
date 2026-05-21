@@ -1,0 +1,12 @@
+.git
+.gitignore
+.claude
+.wrangler
+.DS_Store
+wrangler.toml
+.assetsignore
+CLAUDE.md
+🏫*.pdf
+*.pdf
+~$*
+README.md
