@@ -46,7 +46,7 @@ const translations = {
     'about.feature4': 'Global Student Experience',
 
     // Services
-    'services.title': 'Personalized Tutoring for Home School Students',
+    'services.title': 'Empowering Every Learner',
     'services.subtitle': 'Structured, high-quality tutoring designed to build confidence, clarity, and long-term academic success.',
     'services.math.title': 'Math Tutoring',
     'services.math.description': 'Ontario Curriculum, CBSE, ICSE. From foundational algebra to advanced calculus and functions.',
@@ -237,7 +237,7 @@ const translations = {
     'about.feature4': 'Global Student Experience',
 
     // Services
-    'services.title': 'Personalized Tutoring for Home School Students',
+    'services.title': 'Empowering Every Learner',
     'services.subtitle': 'Structured tutoring designed to build confidence and long-term academic success.',
     'services.math.title': 'Math Tutoring',
     'services.math.description': 'Ontario Curriculum, CBSE, ICSE. From algebra to calculus.',
