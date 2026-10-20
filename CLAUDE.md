@@ -15,6 +15,8 @@ Open `index.html` directly in a browser or use any local server:
 python3 -m http.server 8000
 ```
 
+Internal links use extensionless URLs (`/privacy`, `/terms`) because Cloudflare 307-redirects `*.html` to them. `python3 -m http.server` can't resolve those; use `npx wrangler dev` to test them locally.
+
 There are no build steps, linters, tests, or compilation. Changes to HTML/CSS/JS take effect immediately on reload.
 
 ## Architecture
@@ -37,12 +39,12 @@ Loaded from Google Fonts in each HTML page:
 - `main.js` — Core UI initialized on `DOMContentLoaded`: `initPageLoader` (hides `#pageLoader` on `window.load` with a 3s fallback), `initNavbar` (scroll class toggle), `initMobileMenu`, `initSmoothScroll`, `initCounters` (`[data-count]` + optional `[data-suffix]`), `initTestimonials` (auto-play carousel, responsive `cardsToShow`), `initPricing` (currency toggle CAD ↔ TRY using `[data-price]` / `[data-price-try]` / `[data-price-currency]`), `initFAQ`, `initContactForm` (**currently simulated submission only — no real backend wired**), `initFooterYear`.
 - `animations.js` — IntersectionObserver-based scroll animations and parallax. Exports utility functions via `window.KonceptMastersAnimations`.
 - `language.js` — Bilingual system using `[data-lang]` attributes. Translation keys live in a `translations` object with `en` and `hi` blocks. Persists selection to `localStorage` key `konceptmasters-lang`. Supports `?lang=` URL param (accepts `en` or `hi`). Exports via `window.KonceptMastersLang`.
-  - **Known inconsistency:** `index.html` declares hreflang alternates for `en` and `tr` (Turkish), but the JS only supports `en` / `hi` (Hindi). Currently the `hi` block contains English placeholder text rather than real Hindi translations — treat the language toggle as work-in-progress.
+  - **Work in progress:** the `hi` block contains English placeholder text, not real translations. `index.html` deliberately has no hreflang tags; add them only once a real second-language version exists.
 
 ### Assets (`assets/`)
 - `images/tutor.png` — primary tutor photo (~144KB).
 - `images/logo.svg` — KonceptMasters logo (vector).
-- `images/og-image.jpg`, `images/logo.png`, `images/apple-touch-icon.png` — referenced by meta tags / schema but not yet present on disk; add before relying on social-share previews.
+- `images/og-image.jpg` (1200×630 social-share card), `images/logo.png` (512×512, used by Organization schema), `images/apple-touch-icon.png` (180×180, white background) — rendered from `logo.svg` + `tutor.png` with headless Chrome.
 - `icons/` — currently empty.
 
 ### Key Patterns
@@ -52,7 +54,7 @@ Loaded from Google Fonts in each HTML page:
 
 ## SEO & Structured Data
 
-The site has extensive SEO meta tags, Schema.org JSON-LD (Organization, LocalBusiness, EducationalOrganization, FAQPage, Service), Open Graph, Twitter cards, hreflang tags, and `robots.txt`/`sitemap.xml`. The canonical domain is `konceptmasters.ca` (not `.com`).
+The site has extensive SEO meta tags, Schema.org JSON-LD (Organization, LocalBusiness, EducationalOrganization, FAQPage, Service), Open Graph, Twitter cards, and `robots.txt`/`sitemap.xml` (sitemap lists only the homepage — the legal pages are `noindex`). The canonical domain is `konceptmasters.ca` (not `.com`).
 
 ## Cloudflare Pages Deployment Notes
 

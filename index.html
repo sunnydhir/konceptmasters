@@ -20,11 +20,6 @@
   <meta name="geo.position" content="43.6532;-79.3832">
   <meta name="ICBM" content="43.6532, -79.3832">
 
-  <!-- Language Alternates (Hreflang for bilingual SEO) -->
-  <link rel="alternate" hreflang="en" href="https://konceptmasters.ca/">
-  <link rel="alternate" hreflang="tr" href="https://konceptmasters.ca/?lang=tr">
-  <link rel="alternate" hreflang="x-default" href="https://konceptmasters.ca/">
-
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://konceptmasters.ca/">
@@ -36,7 +31,6 @@
   <meta property="og:image:alt" content="KonceptMasters - Math and Science Tutoring">
   <meta property="og:site_name" content="KonceptMasters">
   <meta property="og:locale" content="en_CA">
-  <meta property="og:locale:alternate" content="tr_TR">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
@@ -84,12 +78,12 @@
     "@id": "https://konceptmasters.ca/#organization",
     "name": "KonceptMasters",
     "alternateName": "Koncept Masters Tutoring",
-    "url": "https://konceptmasters.ca",
+    "url": "https://konceptmasters.ca/",
     "logo": {
       "@type": "ImageObject",
       "url": "https://konceptmasters.ca/assets/images/logo.png",
-      "width": 200,
-      "height": 200
+      "width": 512,
+      "height": 512
     },
     "image": "https://konceptmasters.ca/assets/images/og-image.jpg",
     "description": "Premium Math & Science tutoring by an OCT-certified educator with 20+ years experience. Ontario, CBSE & ICSE curriculum. Serving students across Canada and internationally.",
@@ -260,42 +254,42 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "How do online tutoring sessions work?",
+        "name": "What grade levels do you support?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Online sessions are conducted via Zoom or Google Meet. We use a digital whiteboard for real-time problem solving, screen sharing for demonstrations, and provide session recordings upon request. All you need is a computer with internet access and a quiet space to learn."
+          "text": "We support students in Grades 8 through 12 for mathematics, and Grades 8-10 for science. We also provide university-level mathematics support for students in Engineering, Computer Science, Physical Sciences, Economics, and Data Science programs."
         }
       },
       {
         "@type": "Question",
-        "name": "What grades and subjects do you tutor?",
+        "name": "Which curriculum do you teach?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We specialize in high school Math and Science (Grades 9-12). This includes all levels of Mathematics (including Calculus and Advanced Functions), Physics, Chemistry, and Biology. We're familiar with both Canadian (Ontario) and Turkish curriculums."
+          "text": "We teach Ontario Curriculum (including MTH1W, MTH2W, MCR3U, MHF4U, MCV4U), as well as CBSE and ICSE curriculums. Our cross-cultural teaching experience allows us to adapt instruction to meet the unique needs of each student regardless of their academic background."
         }
       },
       {
         "@type": "Question",
-        "name": "Do you offer in-person tutoring?",
+        "name": "Are sessions online or in person?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes! We offer both online and in-person tutoring. In-person sessions are available in select areas. Online sessions are available worldwide and work great for students in both Canada and Turkey."
+          "text": "Sessions are currently offered online, with interactive and engaging lessons using digital whiteboards, screen sharing, and collaborative tools. This allows us to serve students across Canada and internationally with the same high-quality instruction."
         }
       },
       {
         "@type": "Question",
-        "name": "How long are tutoring sessions?",
+        "name": "Who teaches the classes?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Standard sessions are 1 hour long, which is ideal for focused learning without fatigue. For exam preparation or intensive review, 90-minute or 2-hour sessions can be arranged."
+          "text": "All sessions are conducted by an Ontario College of Teachers OCT-certified educator with more than 20 years of diverse teaching and professional experience across India, China, Turkey, and Canada. This ensures every student receives expert, qualified instruction."
         }
       },
       {
         "@type": "Question",
-        "name": "Do you offer a free trial session?",
+        "name": "Do you offer trial sessions?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes! We offer a free 15-20 minute consultation call where we can discuss your goals, assess your needs, and see if we're a good fit."
+          "text": "Yes, a consultation session is available to assess fit and learning needs. This allows us to understand your academic goals, identify any learning gaps, and determine how we can best support your educational journey."
         }
       }
     ]
@@ -318,18 +312,13 @@
   }
   </script>
 
-  <!-- Schema.org - WebSite (for sitelinks search) -->
+  <!-- Schema.org - WebSite -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "KonceptMasters",
-    "url": "https://konceptmasters.ca",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://konceptmasters.ca/?s={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
+    "url": "https://konceptmasters.ca/"
   }
   </script>
 </head>
@@ -396,7 +385,7 @@
     <div style="margin-top: var(--space-8);">
       <button class="lang-toggle" id="langToggleMobile" style="width: 100%; justify-content: center; background: var(--gray-100); color: var(--gray-700);">
         <span class="flag">🇨🇦</span>
-        <span data-lang="lang.switch">Switch to Turkish</span>
+        <span data-lang="lang.switch">Switch Language</span>
       </button>
     </div>
     <div style="margin-top: var(--space-4);">
@@ -1437,8 +1426,8 @@
       <div class="footer-bottom">
         <p>&copy; <span id="currentYear">2024</span> KonceptMasters. <span data-lang="footer.rights">All rights reserved.</span></p>
         <div class="footer-bottom-links">
-          <a href="privacy.html" data-lang="footer.privacy">Privacy Policy</a>
-          <a href="terms.html" data-lang="footer.terms">Terms of Service</a>
+          <a href="/privacy" data-lang="footer.privacy">Privacy Policy</a>
+          <a href="/terms" data-lang="footer.terms">Terms of Service</a>
         </div>
       </div>
     </div>
