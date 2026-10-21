@@ -31,7 +31,7 @@ There are no build steps, linters, tests, or compilation. Changes to HTML/CSS/JS
 - `animations.css` — Scroll reveal animations using `[data-animate]` attribute system (fade-up/down/left/right, scale-up, zoom-in, flip) with `[data-delay]` stagger support. Respects `prefers-reduced-motion`.
 
 ### Typography
-Loaded from Google Fonts in each HTML page:
+Self-hosted in `assets/fonts/` (woff2 variable fonts, latin + latin-ext subsets — together they cover Turkish ğ ş ı İ) with `@font-face` at the top of `css/styles.css`. **Do not re-add Google Fonts `<link>`s**: fonts.googleapis.com / fonts.gstatic.com are blocked in China and make the page hang there. Licences: `assets/fonts/OFL-*.txt`.
 - `--font-primary`: **DM Sans** (body / UI)
 - `--font-display`: **Playfair Display** (display headings)
 
@@ -45,6 +45,7 @@ Loaded from Google Fonts in each HTML page:
 - `images/tutor.png` — primary tutor photo (~144KB).
 - `images/logo.svg` — KonceptMasters logo (vector).
 - `images/og-image.jpg` (1200×630 social-share card), `images/logo.png` (512×512, used by Organization schema), `images/apple-touch-icon.png` (180×180, white background) — rendered from `logo.svg` + `tutor.png` with headless Chrome.
+- `fonts/` — self-hosted DM Sans (upright + italic) and Playfair Display (upright) woff2 + OFL licences. Playfair italic is browser-synthesized (hero `.highlight`), matching the previous Google Fonts look.
 - `icons/` — currently empty.
 
 ### Key Patterns
@@ -54,7 +55,7 @@ Loaded from Google Fonts in each HTML page:
 
 ## SEO & Structured Data
 
-The site has extensive SEO meta tags, Schema.org JSON-LD (Organization, LocalBusiness, EducationalOrganization, FAQPage, Service), Open Graph, Twitter cards, and `robots.txt`/`sitemap.xml` (sitemap lists only the homepage — the legal pages are `noindex`). The canonical domain is `konceptmasters.ca` (not `.com`).
+The site has extensive SEO meta tags, Schema.org JSON-LD (Organization, LocalBusiness, EducationalOrganization, FAQPage, Service), Open Graph, Twitter cards, and `robots.txt`/`sitemap.xml` (sitemap lists only the homepage — the legal pages are `noindex`). The canonical domain is `konceptmasters.ca` (not `.com`). Target markets: Canada, Turkey, China (+ India) — `areaServed` in the EducationalOrganization and Service schema lists all four. The site must load without any Google-hosted resource (China).
 
 ## Cloudflare Pages Deployment Notes
 

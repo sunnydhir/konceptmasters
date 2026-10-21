@@ -24,7 +24,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://konceptmasters.ca/">
   <meta property="og:title" content="KonceptMasters - Expert Math & Science Tutoring">
-  <meta property="og:description" content="Premium Math & Science tutoring by an OCT-certified educator with 20+ years experience. Ontario, CBSE & ICSE curriculum support. Serving students across Canada and internationally.">
+  <meta property="og:description" content="Premium Math & Science tutoring by an OCT-certified educator with 20+ years experience. Ontario, CBSE & ICSE curriculum support. Live online tutoring for students in Canada, Turkey, China and worldwide.">
   <meta property="og:image" content="https://konceptmasters.ca/assets/images/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -36,7 +36,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://konceptmasters.ca/">
   <meta name="twitter:title" content="KonceptMasters - Expert Math & Science Tutoring">
-  <meta name="twitter:description" content="Premium Math & Science tutoring by an OCT-certified educator. Ontario, CBSE & ICSE curriculum. Serving students across Canada and internationally.">
+  <meta name="twitter:description" content="Premium Math & Science tutoring by an OCT-certified educator. Ontario, CBSE & ICSE curriculum. Live online tutoring for students in Canada, Turkey, China and worldwide.">
   <meta name="twitter:image" content="https://konceptmasters.ca/assets/images/og-image.jpg">
   <meta name="twitter:image:alt" content="KonceptMasters Tutoring Services">
 
@@ -54,17 +54,10 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
   <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
 
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-
-  <!-- Preload critical resources -->
+  <!-- Preload critical resources (fonts are self-hosted; @font-face lives in css/styles.css) -->
   <link rel="preload" href="css/styles.css" as="style">
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" as="style">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/styles.css">
@@ -86,7 +79,7 @@
       "height": 512
     },
     "image": "https://konceptmasters.ca/assets/images/og-image.jpg",
-    "description": "Premium Math & Science tutoring by an OCT-certified educator with 20+ years experience. Ontario, CBSE & ICSE curriculum. Serving students across Canada and internationally.",
+    "description": "Premium Math & Science tutoring by an OCT-certified educator with 20+ years experience. Ontario, CBSE & ICSE curriculum. Live online tutoring for students in Canada, Turkey, China and worldwide.",
     "email": "contact@konceptmasters.com",
     "telephone": "+1-942-667-1611",
     "address": {
@@ -99,6 +92,14 @@
       {
         "@type": "Country",
         "name": "Canada"
+      },
+      {
+        "@type": "Country",
+        "name": "Turkey"
+      },
+      {
+        "@type": "Country",
+        "name": "China"
       },
       {
         "@type": "Country",
@@ -168,12 +169,34 @@
     "@id": "https://konceptmasters.ca/#tutoring-service",
     "serviceType": "Tutoring",
     "name": "High School Math & Science Tutoring",
-    "description": "Personalized one-on-one tutoring for high school students in Mathematics, Physics, Chemistry, and Biology. Available online and in-person.",
+    "description": "Personalized one-on-one tutoring for high school students in Mathematics, Physics, Chemistry, and Biology. Live online sessions for students in Canada, Turkey, China and worldwide, plus in-person coaching.",
     "provider": {
       "@type": "EducationalOrganization",
       "@id": "https://konceptmasters.ca/#organization"
     },
-    "areaServed": ["Canada", "Turkey"],
+    "areaServed": [
+      {
+        "@type": "Country",
+        "name": "Canada"
+      },
+      {
+        "@type": "Country",
+        "name": "Turkey"
+      },
+      {
+        "@type": "Country",
+        "name": "China"
+      },
+      {
+        "@type": "Country",
+        "name": "India"
+      }
+    ],
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "name": "Live online sessions",
+      "availableLanguage": "English"
+    },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Tutoring Packages by Grade",
