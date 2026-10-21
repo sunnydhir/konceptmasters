@@ -16,7 +16,7 @@ const translations = {
     'lang.switch': 'Switch Language',
 
     // Hero Section
-    'hero.badge': 'Serving students across Canada and internationally',
+    'hero.badge': 'Live online tutoring for students in Canada, Turkey, China & worldwide',
     'hero.title1': 'Master Concepts.',
     'hero.title2': 'Build Confidence.',
     'hero.title3': 'Achieve Excellence.',
@@ -61,7 +61,7 @@ const translations = {
     'services.exam.description': 'Homework support, test prep, and enrichment for advanced learners. Customized learning plans.',
     'services.exam.grades': 'All Grades',
     'services.online.title': 'Live Online Sessions',
-    'services.online.description': 'Interactive virtual classes with digital whiteboards, screen sharing, and real-time collaboration. Learn from anywhere in Canada or internationally.',
+    'services.online.description': 'Interactive virtual classes with digital whiteboards, screen sharing, and real-time collaboration. Learn from anywhere: Canada, Turkey, China or worldwide.',
     'services.online.grades': 'All Grades',
     'services.inperson.title': 'In-Person Coaching',
     'services.inperson.description': 'Face-to-face tutoring sessions in a focused, structured environment. Personalized attention with hands-on problem solving.',
@@ -160,7 +160,7 @@ const translations = {
     'faq.q2': 'Which curriculum do you teach?',
     'faq.a2': 'We teach Ontario Curriculum (including MTH1W, MTH2W, MCR3U, MHF4U, MCV4U), as well as CBSE and ICSE curriculums. Our cross-cultural teaching experience allows us to adapt instruction to meet the unique needs of each student regardless of their academic background.',
     'faq.q3': 'Are sessions online or in person?',
-    'faq.a3': 'Sessions are currently offered online, with interactive and engaging lessons using digital whiteboards, screen sharing, and collaborative tools. This allows us to serve students across Canada and internationally with the same high-quality instruction.',
+    'faq.a3': 'Sessions are currently offered online, with interactive and engaging lessons using digital whiteboards, screen sharing, and collaborative tools. This allows us to serve students in Canada, Turkey, China and worldwide with the same high-quality instruction.',
     'faq.q4': 'Who teaches the classes?',
     'faq.a4': 'All sessions are conducted by an Ontario College of Teachers OCT-certified educator with more than 20 years of diverse teaching and professional experience across India, China, Turkey, and Canada. This ensures every student receives expert, qualified instruction.',
     'faq.q5': 'Do you offer trial sessions?',
@@ -186,7 +186,7 @@ const translations = {
     'contact.success.text': "Thank you for reaching out. We'll get back to you within 24 hours.",
 
     // Footer
-    'footer.description': 'Premium Math & Science tutoring for students in Canada and internationally. Where Concepts Become Confidence.',
+    'footer.description': 'Premium Math & Science tutoring for students in Canada, Turkey, China and worldwide. Where Concepts Become Confidence.',
     'footer.quicklinks': 'Quick Links',
     'footer.subjects': 'Subjects',
     'footer.contact': 'Contact',
@@ -207,7 +207,7 @@ const translations = {
     'lang.switch': 'Switch Language',
 
     // Hero Section
-    'hero.badge': 'Serving students across Canada and internationally',
+    'hero.badge': 'Live online tutoring for students in Canada, Turkey, China & worldwide',
     'hero.title1': 'Master Concepts.',
     'hero.title2': 'Build Confidence.',
     'hero.title3': 'Achieve Excellence.',
